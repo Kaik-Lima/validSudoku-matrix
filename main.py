@@ -25,8 +25,9 @@ class Solution(object):
         elements = [num for num in boardSub if num != '.']
         if len(elements) != len(set(elements)) or not all('1' <= num <= '9' for num in elements): return False
     
-    # Se todos os elementos forem verdadeiros:
-    return True
+    # Se algum dos elementos for falso:
+    if not scala or not line or not column: return False
+    else: return True 
     
 sudoku = Solution()
 
